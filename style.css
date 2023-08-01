@@ -1,0 +1,49 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .image-container {
+    margin-top: 20px;
+  }
+  
+  .accordion-input {
+    display: none;
+  }
+  
+  .accordion-label {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .accordion-label:hover {
+    background-color: #ddd;
+  }
+  
+  .image {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  .accordion-input:checked + .accordion-label + .image {
+    max-height: 500px; /* Ajusta la altura según tus necesidades */
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+    padding: 10px;
+  }
+  
+  .image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+ 
+  
